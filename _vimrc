@@ -12,3 +12,8 @@ nmap <C-w>= :resize +5<CR>
 nmap <C-w>- :resize -5<CR>
 nmap <C-w>. :vertical resize +5<CR>
 nmap <C-w>, :vertical resize -5<CR>
+
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
