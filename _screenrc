@@ -1,0 +1,11 @@
+# ~/.screenrc
+
+startup_message off
+autodetach on
+vbell off
+defscrollback 5000
+shell -bash
+
+termcapinfo xterm|xterms|xs|rxvt ti@:te@ # scroll bar support
+term rxvt # mouse support
+termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l' # decline change terminal size
