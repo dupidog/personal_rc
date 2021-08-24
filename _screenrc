@@ -9,3 +9,7 @@ shell -bash
 termcapinfo xterm|xterms|xs|rxvt ti@:te@ # scroll bar support
 term rxvt # mouse support
 termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l' # decline change terminal size
+
+# always display bottom line
+altscreen on
+caption always "%{Wk}%-w%{Wr}%n %t%{-}%+w %=%H %Y-%m-%d %c %p"

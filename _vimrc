@@ -1,3 +1,5 @@
+" ~/.vimrc
+
 set nu
 set autoindent
 set cindent
