@@ -21,7 +21,7 @@ nnoremap j gj
 nnoremap gj j
 
 " Plugin: Auto pairs
-let g:AutoPairsFlyMode = 1
+"let g:AutoPairsFlyMode = 1
 let g:AutoPairsMapCR = 1
 let g:AutoPairsCenterLine = 0
 
