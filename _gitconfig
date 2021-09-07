@@ -1,0 +1,14 @@
+[user]
+	email = dupidog@gmail.com
+	name = Zhangben Wu
+[push]
+	default = simple
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	vd = difftool
+	lg = log --graph --decorate --all
+	dl = diff HEAD~1 HEAD
+	vdl = difftool HEAD~1 HEAD
