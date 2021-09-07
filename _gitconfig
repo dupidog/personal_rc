@@ -1,14 +1,21 @@
 [user]
-	email = dupidog@gmail.com
-	name = Zhangben Wu
+    email = dupidog@gmail.com
+    name = Zhangben Wu
 [push]
-	default = simple
+    default = simple
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
+    trustExitCode = true
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = false
+    conflictstyle = diff3
 [alias]
-	vd = difftool
-	lg = log --graph --decorate --all
-	dl = diff HEAD~1 HEAD
-	vdl = difftool HEAD~1 HEAD
+    vd = difftool
+    vm = mergetool
+    lg = log --graph --decorate --all
+    dl = diff HEAD~1 HEAD
+    vdl = difftool HEAD~1 HEAD
