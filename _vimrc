@@ -67,3 +67,9 @@ function! Terminal_MetaMode(mode)
     endif
 endfunc
 call Terminal_MetaMode(0)
+
+" Record position for last exit
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
