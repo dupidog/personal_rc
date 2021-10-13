@@ -20,6 +20,12 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
+" Color Scheme
+colorscheme base16-tomorrow-night
+if has("termguicolors")
+    set termguicolors
+endif
+
 " Plugin: Auto pairs
 "let g:AutoPairsFlyMode = 1
 let g:AutoPairsMapCR = 1
