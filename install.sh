@@ -34,6 +34,15 @@ fi
 EOF
 fi
 
+# Ingore X server check for vim
+if [ -z "`grep 'vim -X' ~/.bashrc`" ]; then
+cat >> ~/.bashrc <<EOF
+
+# Ingore X server check for vim
+alias vim='vim -X'
+EOF
+fi
+
 # bash-completion
 BASH_COMPLETION_INSTALLED=`apt list bash-completion 2>/dev/null | grep -o 'installed'`
 if [ -z "$BASH_COMPLETION_INSTALLED" ]; then
