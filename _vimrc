@@ -25,6 +25,10 @@ nnoremap gj j
 let g:AutoPairsMapCR = 1
 let g:AutoPairsCenterLine = 0
 
+" Plugin: Ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
 " Enable Meta key in putty
 function! Terminal_MetaMode(mode)
     set ttimeout

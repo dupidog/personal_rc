@@ -3,8 +3,8 @@
 # vim
 cp _vimrc ~/.vimrc
 
-mkdir -p ~/.vim/plugin
-cp _vim/plugin/* ~/.vim/plugin
+mkdir -p ~/.vim
+cp -rf _vim/* ~/.vim/
 
 # screen
 cp _screenrc ~/.screenrc
