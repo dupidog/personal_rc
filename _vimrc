@@ -10,6 +10,8 @@ set expandtab
 set hlsearch
 set magic
 
+syntax on
+
 nmap <C-w>= :resize +5<CR>
 nmap <C-w>- :resize -5<CR>
 nmap <C-w>. :vertical resize +5<CR>
