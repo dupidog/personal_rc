@@ -23,8 +23,10 @@ nnoremap j gj
 nnoremap gj j
 
 " Color Scheme
-colorscheme base16-tomorrow-night
+set t_Co=256
+colorscheme Tomorrow-Night
 if has("termguicolors") && $TERM != 'rxvt'
+    colorscheme base16-tomorrow-night
     set t_8f=[38;2;%lu;%lu;%lum
     set t_8b=[48;2;%lu;%lu;%lum
     set termguicolors

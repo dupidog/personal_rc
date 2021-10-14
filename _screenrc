@@ -9,6 +9,8 @@ shell -bash
 termcapinfo xterm|xterms|xs|rxvt ti@:te@ # scroll bar support
 term rxvt # mouse support
 termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l' # decline change terminal size
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
 
 # always display bottom line
 altscreen on
