@@ -39,7 +39,7 @@ let g:AutoPairsMapCR = 1
 let g:AutoPairsCenterLine = 0
 
 " Plugin: Ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Enable Meta key in putty
@@ -90,3 +90,16 @@ autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+
+" Toggle hex
+nmap <C-h> :call ToggleHex()<CR>
+let b:hex = 0
+function! ToggleHex()
+    if(b:hex == 0)
+        exec ":%!xxd"
+        let b:hex = 1
+    else
+        exec ":%!xxd -r"
+        let b:hex = 0
+    endif
+endfunction
