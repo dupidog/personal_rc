@@ -20,10 +20,10 @@ let s:window = "4d5057"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = "303030"
-	let s:window = "5e5e5e"
-	let s:line = "3a3a3a"
-	let s:selection = "585858"
+	let s:background = "262626"
+	let s:window = "606060"
+	let s:line = "303030"
+	let s:selection = "444444"
 end
 
 hi clear
@@ -241,7 +241,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
-	call <SID>X("LineNr", s:selection, "", "")
+	call <SID>X("LineNr", s:comment, s:line, "")
+	call <SID>X("CursorLineNr", s:yellow, s:line, "none")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
@@ -299,6 +300,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("cStorageClass", s:purple, "", "")
 	call <SID>X("cConditional", s:purple, "", "")
 	call <SID>X("cRepeat", s:purple, "", "")
+	call <SID>X("cStatement", s:green, "", "")
+	call <SID>X("cTodo", s:green, "", "reverse")
+	call <SID>X("cLabel", s:green, "", "")
 
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")

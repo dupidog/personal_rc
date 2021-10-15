@@ -9,6 +9,7 @@ set shiftwidth=4
 set expandtab
 set hlsearch
 set magic
+set cursorline
 
 syntax on
 
