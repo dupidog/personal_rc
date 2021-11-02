@@ -1,10 +1,17 @@
 #! /bin/bash
 
+# vim version
+VIM_VERSION=`vim --version | grep -o "[0-9]\.[0-9]" | head -1 | cut -c 1`
+
 # vim
 cp _vimrc ~/.vimrc
 
 mkdir -p ~/.vim
 cp -rf _vim/* ~/.vim/
+
+if [ "$VIM_VERSION" -ge "8" ]; then
+cp -rf _vim8/* ~/.vim/
+fi
 
 # screen
 cp _screenrc ~/.screenrc
@@ -67,6 +74,25 @@ fi
 EOF
 fi
 else
-echo "Installation aborted."
+echo "Package bash-completion installation skipped."
 fi
+fi
+
+# vim-gutentags
+if [ "$VIM_VERSION" -ge "8" ]; then
+GTAGS_INSTALLED=`apt list global 2>/dev/null | grep -o 'installed'`
+CTAGS_INSTALLED=`apt list exuberant-ctags 2>/dev/null | grep -o 'installed'`
+if [ -z "$GTAGS_INSTALLED" -o -z "$CTAGS_INSTALLED" ]; then
+read -p "Package ctags/gtags not installed, install it? [y/N] " PROMPT
+if [ "$PROMPT" = "y" -o "$PROMPT" = "Y" ]; then
+sudo apt-get install exuberant-ctags global -y
+if [ $? -ne 0 ]; then
+echo "Installation failed, check source and run 'apt-get update'"
+fi
+else
+echo "Package ctags/gtags installation skipped."
+fi
+fi
+else
+echo "Vim version is lower than 8, vim-gutentags installation skipped."
 fi
