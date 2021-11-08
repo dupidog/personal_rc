@@ -13,11 +13,16 @@ set cursorline
 
 syntax on
 
+" Resize split windows
 nmap <C-w>= :resize +5<CR>
 nmap <C-w>- :resize -5<CR>
 nmap <C-w>. :vertical resize +5<CR>
 nmap <C-w>, :vertical resize -5<CR>
 
+" Search and preview tags
+nmap <C-e> <C-w>}<C-w><C-w>
+
+" Use line-wrapped up/down defaultly
 nnoremap k gk
 nnoremap gk k
 nnoremap j gj
