@@ -1,6 +1,8 @@
 [user]
     email = dupidog@gmail.com
     name = Zhangben Wu
+[core]
+    editor = vim
 [push]
     default = simple
 [diff]
