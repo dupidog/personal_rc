@@ -21,3 +21,5 @@
     lg = log --graph --decorate --all
     dl = diff HEAD~1 HEAD
     vdl = difftool HEAD~1 HEAD
+    sua = submodule update --recursive --remote
+    sca = submodule foreach git clean -xdf
