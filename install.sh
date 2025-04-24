@@ -16,6 +16,9 @@ fi
 # screen
 cp _screenrc ~/.screenrc
 
+# tmux
+cp _tmux.conf ~/.tmux.conf
+
 # git
 GIT_USER_NAME=`git config --global user.name`
 GIT_USER_EMAIL=`git config --global user.email`
@@ -47,6 +50,15 @@ cat >> ~/.bashrc <<EOF
 
 # Ingore X server check for vim
 alias vim='vim -X'
+EOF
+fi
+
+# Always use 256color for tmux
+if [ -z "`grep 'tmux -2' ~/.bashrc`" ]; then
+cat >> ~/.bashrc <<EOF
+
+# Always use 256color for tmux
+alias tmux='tmux -2'
 EOF
 fi
 
