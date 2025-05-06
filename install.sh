@@ -44,6 +44,19 @@ fi
 EOF
 fi
 
+# Oh-my-bash
+read -p "Install oh-my-bash? [y/N] " PROMPT
+if [ "$PROMPT" = "y" -o "$PROMPT" = "Y" ]; then
+bash -c "$(curl -fsSL https://gh.dupidog.cn/https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+if [ $? -ne 0 ]; then
+echo "Installation failed"
+else
+sed -i 's#^OSH_THEME=.*$#OSH_THEME="minimal"#' ~/.bashrc
+fi
+else
+echo "Package oh-my-bash installation skipped."
+fi
+
 # Ingore X server check for vim
 if [ -z "`grep 'vim -X' ~/.bashrc`" ]; then
 cat >> ~/.bashrc <<EOF
@@ -108,3 +121,4 @@ fi
 else
 echo "Vim version is lower than 8, vim-gutentags installation skipped."
 fi
+
