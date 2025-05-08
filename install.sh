@@ -57,6 +57,15 @@ else
 echo "Package oh-my-bash installation skipped."
 fi
 
+# fzf
+read -p "Install fzf? [y/N] " PROMPT
+if [ "$PROMPT" = "y" -o "$PROMPT" = "Y" ]; then
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+else
+echo "Package oh-my-bash installation skipped."
+fi
+
 # Ingore X server check for vim
 if [ -z "`grep 'vim -X' ~/.bashrc`" ]; then
 cat >> ~/.bashrc <<EOF
