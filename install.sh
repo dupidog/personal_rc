@@ -18,7 +18,7 @@ cp _screenrc ~/.screenrc
 
 # tmux
 cp _tmux.conf ~/.tmux.conf
-cp -r _tmux ~/.tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # git
 GIT_USER_NAME=`git config --global user.name`
