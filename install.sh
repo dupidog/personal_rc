@@ -48,7 +48,7 @@ fi
 # Oh-my-bash
 read -p "Install oh-my-bash? [y/N] " PROMPT
 if [ "$PROMPT" = "y" -o "$PROMPT" = "Y" ]; then
-bash -c "$(curl -fsSL https://gh.dupidog.cn/https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+echo exit | bash -c "$(curl -fsSL https://gh.dupidog.cn/https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 if [ $? -ne 0 ]; then
 echo "Installation failed"
 else
